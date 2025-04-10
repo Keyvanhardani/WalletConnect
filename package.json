@@ -19,11 +19,11 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
-        "@solana/web3.js": "^1.73.0",
+        "@solana/web3.js": "^1.98.0",
         "@walletconnect/web3-provider": "^1.8.0",
-        "@web3auth/base": "^4.0.0",
-        "@web3auth/openlogin-adapter": "^4.0.0",
-        "@web3auth/web3auth": "^4.0.0",
+        "@web3auth/base": "^9.7.0",
+        "@web3auth/openlogin-adapter": "^8.12.4",
+        "@web3auth/web3auth": "^2.1.3",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.0.0",
         "ethers": "^5.7.2",

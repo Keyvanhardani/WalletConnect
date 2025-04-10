@@ -1,6 +1,17 @@
 # Laravel Vue Web3 Wallet Authentication
 
-Diese Anwendung ermöglicht es Benutzern, sich mit Web3-Wallets anzumelden und zu registrieren, einschließlich Unterstützung für Ethereum (MetaMask), Solana (Phantom), Fantom Wallet und WalletConnect.
+Diese Anwendung ermöglicht es Benutzern, sich mit Web3-Wallets anzumelden und zu registrieren, einschließlich Unterstützung für Ethereum (MetaMask), Solana (Phantom), Fantom Wallet, WalletConnect und Web3Auth (für Email und Social Login).
+
+## Verwendete Web3-Pakete
+
+Die Anwendung verwendet folgende Web3-Pakete in aktuellen Versionen:
+
+- **@solana/web3.js**: ^1.98.0 - Für Solana Blockchain-Interaktionen
+- **@walletconnect/web3-provider**: ^1.8.0 - Für WalletConnect-Integration
+- **@web3auth/base**: ^9.7.0 - Basispaket für Web3Auth
+- **@web3auth/openlogin-adapter**: ^8.12.4 - Adapter für Social Login
+- **@web3auth/web3auth**: ^2.1.3 - Hauptpaket für Web3Auth-Integration
+- **ethers**: ^5.7.2 - Für Ethereum Blockchain-Interaktionen
 
 ## Voraussetzungen
 
@@ -89,19 +100,13 @@ php artisan serve
 
 Die Anwendung sollte jetzt unter `http://localhost:8000` zugänglich sein.
 
-## Funktionen
+## Web3Auth-Integration
 
-- Web3-Wallet-Authentifizierung (Ethereum, Solana, Fantom)
-- Signaturüberprüfung für sichere Authentifizierung
-- Elegantes UI mit Tailwind CSS und Shadcn UI
-- Mehrfache Wallet-Unterstützung
-- Responsives Design
+Die Web3Auth-Integration erfordert die folgenden Konfigurationsschritte:
 
-## Hinweise für Entwickler
-
-- Der aktuelle Code für die Signaturüberprüfung in `Web3AuthController.php` ist eine vereinfachte Implementierung. Für den Produktionseinsatz sollten Sie eine korrekte kryptographische Verifizierung implementieren.
-- In `web3Service.js` müssen Sie einige Platzhalter (wie "YOUR_INFURA_ID") durch tatsächliche Werte ersetzen.
-- Zum Testen benötigen Sie Browser-Erweiterungen für die entsprechenden Wallets (MetaMask, Phantom).
+1. Registrieren Sie sich für ein Konto auf [Web3Auth](https://web3auth.io/)
+2. Erstellen Sie ein neues Projekt und erhalten Sie Ihre Client-ID
+3. Ersetzen Sie `YOUR_WEB3AUTH_CLIENT_ID` in der Datei `web3Service.js` durch Ihre Client-ID
 
 ## SVG-Dateien
 
@@ -110,4 +115,4 @@ Die SVG-Dateien für die Wallet-Logos befinden sich im Verzeichnis `public/image
 - `phantom.svg`
 - `fantom.svg`
 - `walletconnect.svg`
-- `logo.svg`
+- `web3auth.svg`
